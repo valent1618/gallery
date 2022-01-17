@@ -14,7 +14,10 @@ html="<!DOCTYPE html>
 <html>
     <head>
         <title>Galerie</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel='stylesheet' href='styles.css'>
+	      <link rel='preconnect' href='https://fonts.googleapis.com'>
+	      <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	      <link href='https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap' rel='stylesheet'>
     </head>
     <body>"
 
@@ -39,6 +42,7 @@ css="body {
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
+  font-family: 'Neonderthaw', cursive;
 }
 
 img {
@@ -53,10 +57,14 @@ img:hover {
   width: 475px;
 }
 h1 {
-  padding: 2em;
-  border: 5px solid white;
+  font-size: 5em;
   border-radius: 10px;
-  box-shadow: 0px 0px 25px 5px white;
+  text-shadow: 0 0 0.1em currentColor;
+  transition: 0.5s ease;
+}
+
+h1:hover {
+  text-shadow: 0 0 0.2em currentColor;
 }" 
 
 mkdir galleryHtml
@@ -71,4 +79,5 @@ google-chrome index.html
 sleep 1
 
 cd ..
+
 rm -r galleryHtml/ list.txt
