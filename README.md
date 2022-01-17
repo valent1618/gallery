@@ -1,2 +1,3 @@
-# test
-Test for learn git and github
+# gallery
+
+Gallery in HTML and CSS
