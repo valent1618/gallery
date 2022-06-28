@@ -5,7 +5,9 @@ then
 	cd $1
 fi
 
-find *.jpg *.jpeg *.png > list.txt 2>/dev/null
+find . -name "*.jpg" >> list.txt 2>/dev/null
+find . -name "*.jpeg" >> list.txt 2>/dev/null
+find . -name "*.png" >> list.txt 2>/dev/null
 
 numberOfImages=`cat list.txt | wc -l`
 
@@ -25,7 +27,7 @@ if [ $numberOfImages != 0 ]
 then
 	for i in `seq 1 $numberOfImages`
 	do
-		html+="<img src=\"`pwd`/`sed -n "$i p" list.txt`\">"
+		html+="<img src=\".`sed -n "$i p" list.txt`\">"
 	done
 else
 	html+="<h1>No pictures found in your folder</h1>"
